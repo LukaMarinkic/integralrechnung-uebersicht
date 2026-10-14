@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flächeninhalte — Klassenarbeit Integralrechnung</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1><span>●</span> Klassenarbeit · Integralrechnung</h1>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Übersicht</a></li>
+        <li><a href="stammfunktionen.html">Stammfunktionen</a></li>
+        <li><a href="integralrechnung.html">Integralrechnung</a></li>
+        <li><a class="active" href="flaecheninhalte.html">Flächeninhalte</a></li>
+        <li><a href="uebungen.html">Übungen</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-label="Einleitung">
+  <div class="inner">
+    <h2>Flächeninhalte <em>berechnen — alle Varianten</em></h2>
+    <p class="subtitle">Die häufigste Klassenarbeitsaufgabe: Berechne die Fläche zwischen Funktion und x-Achse, zwischen zwei Funktionen, oder mehrere unterschiedlich begrenzte Teilflächen. Achte auf Teile unterhalb der x-Achse!</p>
+  </div>
+</section>
+
+<main class="inner">
+
+  <section aria-label="Zwischen Funktion und x-Achse">
+    <h2 class="section-title">Fläche zwischen Funktion und x-Achse</h2>
+    <p>Wenn <code>f(x)</code> im gesamten Intervall <code>[a,b]</code> oberhalb der x-Achse liegt, berechnest du einfach:</p>
+    <p style="font-family:monospace; font-size:1.05rem; background:var(--surface-2); padding:12px 16px; border-radius:8px; border:1px solid var(--border); display:inline-block;">
+      A = |∫<sub>a</sub><sup>b</sup> f(x) dx|
+    </p>
+    <p>Wenn Teile der Fläche unterhalb der x-Achse verlaufen, musst du das Intervall an den Nullstellen teilen und die Beträge der Teilintegrale addieren.</p>
+  </section>
+
+  <section aria-label="Unterhalb der x-Achse" style="margin-top: 28px;">
+    <h2 class="section-title">Teile unterhalb der x-Achse</h2>
+    <div class="callout">
+      <h4>Wichtig</h4>
+      <p>Wenn ein Teil der Fläche unterhalb der x-Achse liegt, ist das Integral über diesen Teil <strong>negativ</strong>. Der Flächeninhalt ist aber immer positiv — also den Betrag nehmen und zur Gesamtfläche addieren (S. 154, Beispiel 2).</p>
+    </div>
+    <table aria-label="Vorgehen unterhalb x-Achse">
+      <thead><tr><th>Schritt</th><th>Aktion</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Nullstellen von <code>f</code> im Intervall finden</td></tr>
+        <tr><td>2</td><td>Intervall an Nullstellen teilen</td></tr>
+        <tr><td>3</td><td>Jedes Teilintervall einzeln integrieren</td></tr>
+        <tr><td>4</td><td>Beträge aller Teilflächen addieren</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-label="Mehrere Teilflächen" style="margin-top: 28px;">
+    <h2 class="section-title">Mehrere unterschiedlich begrenzte Teilflächen</h2>
+    <p>Wenn verschiedene Funktionen oder Geraden die Fläche begrenzen, teile die Gesamtfläche in Teilflächen, die jeweils nur von <strong>zwei Grenzen</strong> (Funktion und x-Achse oder zwei Funktionen) bestimmt sind. Berechne jede Teilfläche einzeln und addiere.</p>
+    <p>Für beliebige Werte von <code>c</code> gehören insbesondere die Geraden <code>y = c</code> zur Aufgabenstellung — skizziere die Fläche und bestimme die Grenzen abhängig von <code>c</code>.</p>
+    <p class="pages">Nachlesen: S. 156 · Aufgaben: 4a, 4b</p>
+  </section>
+
+  <section aria-label="Zwischen zwei Funktionen" style="margin-top: 28px;">
+    <h2 class="section-title">Fläche zwischen zwei Funktionen</h2>
+    <p>Wenn zwei Funktionen <code>f(x)</code> (oben) und <code>g(x)</code> (unten) eine Fläche einschließen, berechnest du:</p>
+    <p style="font-family:monospace; font-size:1.05rem; background:var(--surface-2); padding:12px 16px; border-radius:8px; border:1px solid var(--border); display:inline-block;">
+      A = ∫<sub>a</sub><sup>b</sup> (f(x) − g(x)) dx
+    </p>
+    <p>Die Grenzen <code>a</code> und <code>b</code> sind die Schnittpunkte der beiden Funktionen.</p>
+
+    <h3 style="font-size:1rem; font-weight:700; margin: 18px 0 8px;">Bei zwei Schnittpunkten</h3>
+    <p>Einfach: Integrationsgrenzen sind die beiden Schnittpunkte. Die Differenzfunktion <code>h(x) = f(x) − g(x)</code> ist im gesamten Intervall ≥ 0.</p>
+
+    <h3 style="font-size:1rem; font-weight:700; margin: 18px 0 8px;">Bei mehr als zwei Schnittpunkten</h3>
+    <p>Teile das Intervall an allen Schnittpunkten. In jedem Teilintervall prüfe, welche Funktion oben liegt. Berechne dann jede Teilfläche einzeln und addiere die Beträge.</p>
+
+    <h3 style="font-size:1rem; font-weight:700; margin: 18px 0 8px;">Bei Teilflächen, die von mehr als zwei Funktionen begrenzt werden</h3>
+    <p>Zerlege in einzelne Teilflächen, die jeweils nur von zwei Grenzen (zwei Funktionen oder Funktion + x-Achse) eingeschlossen sind. Skizziere die Fläche, um die Grenzen zu erkennen (S. 157–159, „Weitere Flächeninhalte“).</p>
+  </section>
+
+  <section aria-label="Übungen" style="margin-top: 28px;">
+    <h2 class="section-title">Übungsaufgaben (Flächeninhalte)</h2>
+    <table aria-label="Flächeninhalte-Übungen">
+      <thead><tr><th>Seite</th><th>Inhalt</th></tr></thead>
+      <tbody>
+        <tr><td>S. 154</td><td>Fläche zwischen Funktion und x-Achse</td></tr>
+        <tr><td>S. 154 (Bsp. 2)</td><td>Teil unterhalb der x-Achse</td></tr>
+        <tr><td>S. 156 / 4a, 4b</td><td>Mehrere unterschiedlich begrenzte Teilflächen</td></tr>
+        <tr><td>S. 157–159</td><td>Fläche zwischen zwei Funktionen (mehr Schnittpunkte, mehrere Grenzen)</td></tr>
+        <tr><td>OneNote</td><td>Skizzen mit Geraden <code>y = c</code> für beliebige <code>c</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>Flächeninhalte · Block 3</span>
+    <span>Fachbuch S. 154–159 · OneNote „Weitere Flächeninhalte“</span>
+  </div>
+</footer>
+
+</body>
+</html>

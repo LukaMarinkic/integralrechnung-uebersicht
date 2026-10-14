@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stammfunktionen — Klassenarbeit Integralrechnung</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1><span>●</span> Klassenarbeit · Integralrechnung</h1>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Übersicht</a></li>
+        <li><a class="active" href="stammfunktionen.html">Stammfunktionen</a></li>
+        <li><a href="integralrechnung.html">Integralrechnung</a></li>
+        <li><a href="flaecheninhalte.html">Flächeninhalte</a></li>
+        <li><a href="uebungen.html">Übungen</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-label="Einleitung">
+  <div class="inner">
+    <h2>Stammfunktionen <em>bestimmen & skizzieren</em></h2>
+    <p class="subtitle">Stammfunktionen sind das Gegenstück zur Ableitung. Hier lernst du die Rechenregeln für Potenz-, Exponential- und trigonometrische Funktionen, wie du eine bestimmte Stammfunktion durch einen Punkt bestimmst und wie du den Graphen skizzierst.</p>
+  </div>
+</section>
+
+<main class="inner">
+
+  <section aria-label="Stammfunktionen bestimmen">
+    <h2 class="section-title">Stammfunktionen bestimmen</h2>
+    <div class="card-grid">
+      <article class="card">
+        <span class="tag">S. 84</span>
+        <h3>Potenzfunktionen</h3>
+        <p>Für <code>f(x) = xⁿ</code> (mit <code>n ≠ −1</code>) ist eine Stammfunktion <code>F(x) = xⁿ⁺¹/(n+1) + C</code>. Übe besonders negative und gebrochene Exponenten.</p>
+        <p class="pages">Nachlesen: S. 84</p>
+      </article>
+      <article class="card">
+        <span class="tag">S. 86</span>
+        <h3>Exponentialfunktionen</h3>
+        <p>Für <code>f(x) = eˣ</code> ist <code>F(x) = eˣ + C</code>. Für <code>f(x) = a·e^(kx)</code> nutze die Kettenregel rückwärts: <code>F(x) = a/k · e^(kx) + C</code>.</p>
+        <p class="pages">Nachlesen: S. 86</p>
+      </article>
+      <article class="card">
+        <span class="tag">S. 86</span>
+        <h3>Trigonometrische Funktionen</h3>
+        <p>Stammfunktionen von <code>sin(x)</code>, <code>cos(x)</code>, <code>tan(x)</code> und deren Vielfache. Achte auf Vorzeichenwechsel bei Integration.</p>
+        <p class="pages">Nachlesen: S. 86</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-label="Bestimmte Stammfunktion" style="margin-top: 28px;">
+    <h2 class="section-title">Bestimmte Stammfunktion durch einen Punkt</h2>
+    <div class="callout">
+      <h4>So gehst du vor</h4>
+      <p>1. Allgemeine Stammfunktion <code>F(x)</code> bestimmen (mit Konstante <code>C</code>).<br>
+      2. Den gegebenen Punkt <code>(x₀ | y₀)</code> in <code>F</code> einsetzen und <code>C</code> lösen.<br>
+      3. Die konkrete Funktion <code>F(x)</code> angeben.</p>
+    </div>
+    <table aria-label="Stammfunktion-Tabelle">
+      <thead><tr><th>Schritt</th><th>Was tun</th><th>Hinweis</th></tr></thead>
+      <tbody>
+        <tr><td>1. Allgemein</td><td>Stammfunktion bestimmen</td><td>Konstante <code>C</code> nicht vergessen</td></tr>
+        <tr><td>2. Einsetzen</td><td>Punkt <code>P(x₀|y₀)</code> einsetzen</td><td>Gleichung für <code>C</code> aufstellen</td></tr>
+        <tr><td>3. Konkret</td><td><code>F(x)</code> mit gelöstem <code>C</code> angeben</td><td>Kontrolle durch Ableiten</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-label="Begriffe klären" style="margin-top: 28px;">
+    <h2 class="section-title">Unterschied: Stammfunktion — bestimmte — alle</h2>
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));">
+      <article class="card">
+        <h3>Eine Stammfunktion</h3>
+        <p>Eine einzelne Funktion <code>F(x)</code>, deren Ableitung <code>f(x)</code> ergibt. Ohne konkrete Konstante erwähnt.</p>
+      </article>
+      <article class="card">
+        <h3>Eine bestimmte Stammfunktion</h3>
+        <p>Durch einen Punkt festgelegt — also <code>F(x)</code> mit einem <strong>konkreten</strong> Wert für <code>C</code>. Das ist die übliche Klassenarbeitsaufgabe.</p>
+      </article>
+      <article class="card">
+        <h3>Alle Stammfunktionen</h3>
+        <p>Die gesamte Familie <code>F(x) + C</code> mit beliebigem <code>C ∈ ℝ</code>. Jede davon hat dieselbe Ableitung <code>f(x)</code>.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-label="Graph skizzieren" style="margin-top: 28px;">
+    <h2 class="section-title">Graph einer Stammfunktion skizzieren</h2>
+    <p>Wenn der Graph von <code>f(x)</code> gegeben ist, kannst du <code>F(x)</code> qualitativ skizzieren:</p>
+    <ul>
+      <li>Wo <code>f(x) > 0</code>, steigt <code>F(x)</code> an.</li>
+      <li>Wo <code>f(x) < 0</code>, fällt <code>F(x)</code> ab.</li>
+      <li>Nullstellen von <code>f</code> sind Extrempunkte von <code>F</code>.</li>
+      <li>Die Konstante <code>C</code> verschiebt den Graphen nur vertikal.</li>
+    </ul>
+    <p class="pages">Nachlesen: S. 87</p>
+  </section>
+
+  <section aria-label="Übungen" style="margin-top: 28px;">
+    <h2 class="section-title">Übungsaufgaben (Stammfunktionen)</h2>
+    <table aria-label="Stammfunktionen-Übungen">
+      <thead><tr><th>Seite</th><th>Aufgaben</th><th>Hinweis</th></tr></thead>
+      <tbody>
+        <tr><td>S. 89</td><td>1, 2, 3 (c,d,h), 8, 9, 13</td><td>Kernübungen</td></tr>
+        <tr><td>S. 128–131</td><td>Wiederholung & Vertiefung</td><td>Integralrechnung-Vorbereitung</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>Stammfunktionen · Block 1</span>
+    <span>Fachbuch S. 84–89 · Übungsseiten S. 89, 128–131</span>
+  </div>
+</footer>
+
+</body>
+</html>
